@@ -1,0 +1,118 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 50px 20px;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.tweet {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 32px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.link {
+    margin-bottom: 14px;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d9bf0;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    width: 100%;
+    height: 780px;
+    border: none;
+    border-radius: 8px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-link {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    color: #555;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+#downloadAll {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: .7;
+    color: #444;
+}
+
+#downloadAll:hover {
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background: #0f1115;
+        color: #e6e6e6;
+    }
+
+    .tweet {
+        background: #161a20;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+    }
+
+    .link a {
+        color: #7fb3ff;
+    }
+
+    .link a:hover {
+        text-decoration: underline;
+    }
+
+    .home-link {
+        background: #1c2128;
+        border-color: #2d333b;
+        color: #c9d1d9;
+    }
+
+    .home-link:hover {
+        background: #252b33;
+    }
+
+    #downloadAll {
+        color: #e6e6e6;
+    }
+}
