@@ -116,51 +116,51 @@
             font-size: 12px;
             opacity: 0.6;
         }
-        html { visibility: hidden; }
+        /*html { visibility: hidden; }*/
     </style>
-    <script>
-        (async function () {
-            const HASH = "5076bcb767ef31315167fbd5d7fae400bf6793b8dbf57841d6c3b80e7b014641";
+<!--    <script>-->
+<!--        (async function () {-->
+<!--            const HASH = "5076bcb767ef31315167fbd5d7fae400bf6793b8dbf57841d6c3b80e7b014641";-->
 
-            async function sha256(str) {
-                const buf = await crypto.subtle.digest(
-                    "SHA-256",
-                    new TextEncoder().encode(str)
-                );
-                return Array.from(new Uint8Array(buf))
-                    .map(b => b.toString(16).padStart(2, "0"))
-                    .join("");
-            }
+<!--            async function sha256(str) {-->
+<!--                const buf = await crypto.subtle.digest(-->
+<!--                    "SHA-256",-->
+<!--                    new TextEncoder().encode(str)-->
+<!--                );-->
+<!--                return Array.from(new Uint8Array(buf))-->
+<!--                    .map(b => b.toString(16).padStart(2, "0"))-->
+<!--                    .join("");-->
+<!--            }-->
 
-            function showPage() {
-                document.documentElement.style.visibility = "visible";
-            }
+<!--            function showPage() {-->
+<!--                document.documentElement.style.visibility = "visible";-->
+<!--            }-->
 
-            // 초기 숨김 (body 말고 html 기준)
-            document.documentElement.style.visibility = "hidden";
+<!--            // 초기 숨김 (body 말고 html 기준)-->
+<!--            document.documentElement.style.visibility = "hidden";-->
 
-            if (sessionStorage.getItem("auth") === "ok") {
-                showPage();
-                return;
-            }
+<!--            if (sessionStorage.getItem("auth") === "ok") {-->
+<!--                showPage();-->
+<!--                return;-->
+<!--            }-->
 
-            const input = prompt("비밀번호 입력");
+<!--            const input = prompt("비밀번호 입력");-->
 
-            if (!input) {
-                return;
-            }
+<!--            if (!input) {-->
+<!--                return;-->
+<!--            }-->
 
-            const hashed = await sha256(input);
+<!--            const hashed = await sha256(input);-->
 
-            if (hashed === HASH) {
-                sessionStorage.setItem("auth", "ok");
-                showPage();
-            } else {
-                alert("틀림");
-                location.reload();
-            }
-        })();
-    </script>
+<!--            if (hashed === HASH) {-->
+<!--                sessionStorage.setItem("auth", "ok");-->
+<!--                showPage();-->
+<!--            } else {-->
+<!--                alert("틀림");-->
+<!--                location.reload();-->
+<!--            }-->
+<!--        })();-->
+<!--    </script>-->
 </head>
 
 <body>
